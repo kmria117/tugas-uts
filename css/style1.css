@@ -1,0 +1,212 @@
+/* ============================================================
+   DESAIN WEBSITE SEKOLAH (VERSI UPGRADE)
+   ============================================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;500&display=swap');
+
+/* ── CSS VARIABLES ── */
+:root {
+  --primary: #2F80ED;
+  --secondary: #56CCF2;
+  --dark: #1C3D5A;
+  --light: #f4f6f9;
+  --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f4f6f9, #eaf2ff); /* tambah gradasi halus */
+  color: var(--dark);
+  padding-bottom: 60px;
+}
+
+/* ── HEADER ── */
+header {
+  background: linear-gradient(90deg, #2F80ED, #56CCF2); /* beda dari template */
+  padding: 18px 40px; /* lebih compact */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 1px; /* biar lebih elegan */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+header nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 7px 14px;
+  border-radius: 20px; /* ubah jadi rounded pill */
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  background: rgba(255,255,255,0.2); /* beda dari template */
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.underline {
+  width: 50px; /* sedikit beda */
+  height: 4px;
+  background: linear-gradient(90deg, #2F80ED, #56CCF2);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* ── FASILITAS ── */
+#fasilitas {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  width: 260px;
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px) scale(1.02); /* tambah scale dikit */
+}
+
+.menu-img-wrap {
+  width: 100%;
+  height: 160px; /* kontrol tinggi biar horizontal */
+  overflow: hidden;
+}
+.menu-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ini kunci utama */
+}
+
+.menu-card h3 {
+  padding: 12px;
+  color: var(--primary);
+}
+
+.menu-card p {
+  padding: 0 12px 15px;
+  font-size: 0.88rem;
+  color: #555; /* beda dari sebelumnya */
+}
+
+/* ── JADWAL ── */
+#jadwal {
+  background: linear-gradient(90deg, #2F80ED, #56CCF2);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.hours-card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 18px;
+  display: inline-block;
+  margin: 10px;
+  backdrop-filter: blur(5px); /* efek modern */
+}
+
+/* ── FOOTER ── */
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+#about .container,
+#lokasi .container {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.btn-login-nav {
+  background: white;
+  color: #2F80ED;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-login-nav:hover {
+  background: #e3f2fd;
+}
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 18px 40px;
+ 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+}
+
+/* LOGO TENGAH */
+.logo-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGIN DI KANAN */
+nav {
+  margin-left: auto;
+}
+.logo-img{
+  width: 40px;
+}

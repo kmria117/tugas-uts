@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Data Siswa - SMAN 13 Sinjai</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>Sistem Informasi Sekolah</header>
+
+  <div class="main-container">
+    
+    <!-- SIDEBAR -->
+    <aside>
+      <ul class="menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="tabel.html">Data Siswa</a></li>
+        <li><a href="form.html">Tambah Siswa</a></li>
+        <li><a href="login.html">Keluar</a></li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section class="main">
+      <h2 class="judul">Data Siswa</h2>
+      <a class="tombol" href="form.html">Tambah Data</a>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Foto</th>
+            <th>NIS</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Jurusan</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><img src="resource/foto.png" class="foto-bulat"></td>
+            <td>10234</td>
+            <td>JULFIANTI</td>
+            <td>XI</td>
+            <td>IPS</td>
+            <td>
+              <a class="tombol edit" href="#">Edit</a>
+              <a class="tombol hapus" href="#">Hapus</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td><img src="resource/foto.png" class="foto-bulat"></td>
+            <td>10235</td>
+            <td>Siti Rahma</td>
+            <td>XII</td>
+            <td>IPS</td>
+            <td>
+              <a class="tombol edit" href="#">Edit</a>
+              <a class="tombol hapus" href="#">Hapus</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td><img src="resource/foto.png" class="foto-bulat"></td>
+            <td>10236</td>
+            <td>Rizky Pratama</td>
+            <td>X</td>
+            <td>IPA</td>
+            <td>
+              <a class="tombol edit" href="#">Edit</a>
+              <a class="tombol hapus" href="#">Hapus</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </section>
+  </div>
+
+  <footer>© 2026 SMAN 13 Sinjai</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

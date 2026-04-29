@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── CSS VARIABLES ── */
+:root {
+  --sidebar-bg: #111827;
+  --sidebar-hover: #1f2937;
+  --sidebar-active: #2F80ED;
+  --header-bg: #2F80ED;
+  --main-bg: #09549e;
+  --card-bg: #ffffff;
+  --text-primary: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --blue: #2F80ED;
+  --red: #ef4444;
+  --orange: #f97316;
+  --green: #22c55e;
+  --header:var(--orange)
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--main-bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── LOGIN PAGE ── */
+body.login-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3a5f 0%, #111827 100%);
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+.logo-img {
+  width: 70px;   /* ubah sesuai selera */
+  height: auto;
+}
+.brand { font-size: 1.5rem; font-weight: 700; color: #1e3a5f; text-align: center; margin-bottom: 6px; }
+.brand span { color: #3b82f6; }
+.subtitle { text-align: center; color: #64748b; font-size: 0.875rem; margin-bottom: 30px; }
+.form-label { font-size: 0.85rem; font-weight: 600; color: #334155; }
+.form-control { border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 11px 14px; font-size: 0.9rem; }
+.form-control:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.15); }
+.input-group-text { background: #f8fafc;
+   border: 1.5px solid #e2e8f0; 
+  border-right: none;
+   color: #94a3b8; border-radius: 8px 0 0 8px; }
+.input-group .form-control { border-left: none; border-radius: 0 8px 8px 0; }
+
+.btn-login {
+  background: #1e3a5f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.btn-login:hover { background: #2d5491;
+   transform: translateY(-1px); color: #fff; }
+.footer-text { text-align: center; font-size: 0.78rem; color: #94a3b8; margin-top: 20px; }
+
+/* ── HEADER ── */
+header {
+  header {
+  background: linear-gradient(90deg, #2F80ED, #56CCF2);}
+  color: #fff;
+  padding: 0 28px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Menggunakan pseudo-elemen ::before untuk menyisipkan ikon */
+header::before { 
+  content: '';        /* Mengisi konten dengan emoji/ikon kopi */
+  margin-right: 10px;  /* Memberi jarak antara ikon dan teks */
+  font-size: 1.2rem;
+}
+
+/* ── LAYOUT ── */
+.main-container {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 100px);
+}
+
+/* ── SIDEBAR ── */
+aside {
+  width: 220px;
+  min-width: 220px;
+  background: #0f172a;
+  padding: 20px 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: none;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, border-left 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.menu a:hover {
+  background: var(--sidebar-hover);
+  color: #e2e8f0;
+  border-left: 3px solid var(--sidebar-active);
+}
+
+.menu li:first-child a {
+  background: var(--sidebar-hover);
+  color: #fff;
+  border-left: 3px solid var(--sidebar-active);
+}
+
+/* ── MAIN CONTENT ── */
+section.main {
+  flex: 1;
+  padding: 30px 36px;
+  background: var(--main-bg);
+}
+
+section.main h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+section.main h3 {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--sidebar-bg);
+  color: #64748b;
+  padding: 14px 28px;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+}
+
+/* ── TABLE PAGE ── */
+.judul {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.tombol {
+  display: inline-block;
+  padding: 10px 22px;
+  color: #fff;
+  text-decoration: none;
+  background: var(--blue);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.tombol:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.table th {
+  background: var(--header-bg);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 14px 18px;
+  text-align: left;
+  border: none;
+}
+
+.table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody tr:hover { background: #f8fafc; }
+
+.tombol.edit {
+  padding: 7px 14px;
+  font-size: 0.78rem;
+  background: var(--green);
+  border-radius: 4px;
+}
+
+.tombol.hapus {
+  padding: 7px 14px;
+  font-size: 0.78rem;
+  background: var(--red);
+  border-radius: 4px;
+}
+
+/* ── FORM PAGE ── */
+.bs-form-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  max-width: 600px;
+}
+
+.form-control, .form-select {
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+}
+
+.btn-simpan {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.btn-batal {
+  background: #f97316;
+  color: #fff;
+}
+
+/* ── FOTO BULAT DI TABEL ── */
+.foto-bulat {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .main-container { flex-direction: column; }
+  aside { width: 100%; min-width: unset; }
+}
+/* .card {
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+.table tbody tr:hover {
+  background: #eef4ff;
+}
+.tombol {
+  background: linear-gradient(90deg, #2F80ED, #56CCF2);
+} */
+ 
